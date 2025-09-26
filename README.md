@@ -49,14 +49,11 @@ This project is deployed with **Firebase Hosting** (frontend) and **Google Cloud
 
 ### 1. Frontend (Firebase Hosting)
 1. Install Firebase CLI globally:
-   ```bash
    npm install -g firebase-tools
 2. Authenticate with Firebase:
-   ```bash
    firebase login
   
 3. Initialize hosting in the frontend directory (select your Firebase project):
-   ```bash
    firebase init hosting
 - Choose Use existing project and select your Firebase project
 
