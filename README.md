@@ -83,29 +83,27 @@ m3-project-a730e.web.app
 m3-project-a730e.firebaseapp.com
 
 2. Backend (Google Cloud Run)
-Install the Google Cloud SDK: https://cloud.google.com/sdk/docs/install
+  1.Install the Google Cloud SDK: https://cloud.google.com/sdk/docs/install
 
-Authenticate:
-
+  2. Authenticate:
     ```bash
-gcloud auth login
-gcloud config set project <your-project-id>
-Build the Docker image:
-
+        gcloud auth login
+        gcloud config set project <your-project-id>
+  3. Build the Docker image:
     ```bash
-docker build -t gcr.io/<your-project-id>/server:latest .
-Push the image to Google Container Registry:
+        docker build -t gcr.io/<your-project-id>/server:latest .
 
+  4. Push the image to Google Container Registry:
     ```bash
-docker push gcr.io/<your-project-id>/server:latest
-Deploy to Cloud Run:
+        docker push gcr.io/<your-project-id>/server:latest
+  5. Deploy to Cloud Run:
 
-    ```bash
-gcloud run deploy server \
-  --image gcr.io/<your-project-id>/server:latest \
-  --platform managed \
-  --region us-central1 \
-  --allow-unauthenticated
+     ```bash
+  gcloud run deploy server \
+          --image gcr.io/<your-project-id>/server:latest \
+          --platform managed \
+          --region us-central1 \
+          --allow-unauthenticated
   
 After deployment, you’ll get a public API URL like:
 
