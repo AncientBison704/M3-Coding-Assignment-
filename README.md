@@ -84,22 +84,17 @@ m3-project-a730e.firebaseapp.com
   1.Install the Google Cloud SDK: https://cloud.google.com/sdk/docs/install
 
   2. Authenticate:
-    ```sh
 
     gcloud auth login
     gcloud config set project <your-project-id>
   4. Build the Docker image:
-    ```sh
 
     docker build -t gcr.io/<your-project-id>/server:latest .
 
   5. Push the image to Google Container Registry:
-    ```sh
 
     docker push gcr.io/<your-project-id>/server:latest
   6. Deploy to Cloud Run:
-
-     ```sh
     gcloud run deploy server \
           --image gcr.io/<your-project-id>/server:latest \
           --platform managed \
