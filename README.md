@@ -67,12 +67,10 @@ This project is deployed with **Firebase Hosting** (frontend) and **Google Cloud
 - Do not overwrite index.html if prompted
 
 Build the frontend:
-    ```bash
     
     npm run build
 
 Deploy:
-    ```bash
     
     firebase deploy --only hosting
     
@@ -86,20 +84,23 @@ m3-project-a730e.firebaseapp.com
   1.Install the Google Cloud SDK: https://cloud.google.com/sdk/docs/install
 
   2. Authenticate:
-    ```bash
-        gcloud auth login
-        gcloud config set project <your-project-id>
-  3. Build the Docker image:
-    ```bash
-        docker build -t gcr.io/<your-project-id>/server:latest .
+    ```sh
 
-  4. Push the image to Google Container Registry:
-    ```bash
-        docker push gcr.io/<your-project-id>/server:latest
-  5. Deploy to Cloud Run:
+    gcloud auth login
+    gcloud config set project <your-project-id>
+  4. Build the Docker image:
+    ```sh
 
-     ```bash
-  gcloud run deploy server \
+    docker build -t gcr.io/<your-project-id>/server:latest .
+
+  5. Push the image to Google Container Registry:
+    ```sh
+
+    docker push gcr.io/<your-project-id>/server:latest
+  6. Deploy to Cloud Run:
+
+     ```sh
+    gcloud run deploy server \
           --image gcr.io/<your-project-id>/server:latest \
           --platform managed \
           --region us-central1 \
