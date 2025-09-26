@@ -77,7 +77,7 @@ m3-project-a730e.web.app
 
 m3-project-a730e.firebaseapp.com
 
-2. Backend (Google Cloud Run)
+### 2. Backend (Google Cloud Run)
   1.Install the Google Cloud SDK: https://cloud.google.com/sdk/docs/install
 
   2. Authenticate:
