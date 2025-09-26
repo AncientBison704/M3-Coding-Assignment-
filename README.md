@@ -63,11 +63,11 @@ This project is deployed with **Firebase Hosting** (frontend) and **Google Cloud
 
 - Do not overwrite index.html if prompted
 
-Build the frontend:
+4. Build the frontend:
     
     npm run build
 
-Deploy:
+5. Deploy:
     
     firebase deploy --only hosting
     
